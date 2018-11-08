@@ -1,5 +1,22 @@
 const express = require('express');
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
+require("dotenv").config();
+const morgan = require("morgan");
+const bodyParser = require("body-parser");
+const expressJwt = require("express-jwt");
+const PORT = process.env.PORT || 5050;
+
+app.use(morgan("dev"));
+app.use(bodyParser.json());
+app.use("/api", expressJwt({ secret: process.env.SECRET }));
+
+mongoose.set("useCreateIndex", true);
+monfoose.connect("mongodb://localhost:27017/ccc-site", 
+    { useNewUrlParser:true },
+    (err) => {
+        if (err) throw err:
+        console.log("connected to the database");
+    });
 
 require("dotenv").config();
 
