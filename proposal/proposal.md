@@ -9,7 +9,7 @@ Project Requirements
 
 Proposal 
 The requirements are as follows.
-- [ ] Mind Map, What is the structure of your backend and front app going to look like? What routes, models, components, actions, and reducers will I need? Paragraph describing your app idea, What are you building? Who is it for?
+- [x] Mind Map, What is the structure of your backend and front app going to look like? What routes, models, components, actions, and reducers will I need? Paragraph describing your app idea, What are you building? Who is it for?
 - [x] An easily describable MVP, Remeber you have a limited amount of time to develop this project. What is the minimum you can get done on this project to meet the requirements and get a product in someone's hand?
 - [x] User Story, What is a user going to do when they go to your site from the time they hit the landing page? What features do they need and which are optional
 
@@ -23,3 +23,6 @@ And cash-out.
 
 user story: 
 	have you ever needed to buy a cool shirt well here you go we have this amazing product pure vegan threads.
+
+
+
