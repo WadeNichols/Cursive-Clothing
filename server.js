@@ -11,10 +11,10 @@ app.use(bodyParser.json());
 app.use("/api", expressJwt({ secret: process.env.SECRET }));
 
 mongoose.set("useCreateIndex", true);
-monfoose.connect("mongodb://localhost:27017/ccc-site", 
+mongoose.connect("mongodb://localhost:27017/ccc-site", 
     { useNewUrlParser:true },
     (err) => {
-        if (err) throw err:
+        if (err) throw err;
         console.log("connected to the database");
     });
 
