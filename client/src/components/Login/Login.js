@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {withContext} from "../../AppContext.js"
+import { withContext } from "../../AppContext.js";
 //material ui components
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
@@ -10,7 +10,6 @@ import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 
 //other imports
-
 
 class Login extends Component {
   constructor() {
@@ -58,43 +57,41 @@ class Login extends Component {
   render() {
     return (
       <div>
-          
-        <Dialog
-          open={this.state.open}
-          onClose={this.handleClose}
-          aria-labelledby="form-dialog-title"
-        >
-          <DialogTitle id="form-dialog-title">Welcome to C.C.C</DialogTitle>
-          <DialogContent>
-            <DialogContentText>Please login or signup</DialogContentText>
-            <TextField
-              autoFocus
-              margin="dense"
-              id="username"
-              label="username"
-              type="username"
-              value={this.state.username}
-              fullWidth
-            />
-            <TextField
-              autoFocus
-              margin="dense"
-              id="password"
-              label="password"
-              type="password"
-              value={this.state.password}
-              fullWidth
-            />
-          </DialogContent>
-          <DialogActions>
-            <Button onClick={this.handleClose}color="primary">
-              Sing-Up
-            </Button>
-            <Button onClick={this.handleCloseLogin} color="primary">
-              Login
-            </Button>
-          </DialogActions>
-        </Dialog>
+            <Dialog
+              
+              open={this.state.open}
+              onClose={this.handleClose}
+              aria-labelledby="form-dialog-title"
+            >
+              <DialogTitle id="form-dialog-title">Welcome to C.C.C</DialogTitle>
+              <DialogContent>
+                <DialogContentText>Please login or signup</DialogContentText>
+                <TextField
+                  autoFocus
+                  margin="dense"
+                  id="username"
+                  label="username"
+                  type="username"
+                  fullWidth
+                />
+                <TextField
+                  autoFocus
+                  margin="dense"
+                  id="password"
+                  label="password"
+                  type="password"
+                  fullWidth
+                />
+              </DialogContent>
+              <DialogActions>
+                <Button onClick={this.handleClose} color="primary">
+                  Sing-Up
+                </Button>
+                <Button onClick={this.handleSubmit} color="primary">
+                  Login
+                </Button>
+              </DialogActions>
+            </Dialog>
       </div>
     );
   }
