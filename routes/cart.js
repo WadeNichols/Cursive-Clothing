@@ -4,7 +4,7 @@ const Cart = require("../models/cart");
 
 
 
-cartRouter.get('/', (req, res, next) => {
+cartRouter.get("/", (req, res, next) => {
     Cart.find({ user: req.user._id }, (err, carts) => {
         if (err) {
             res.status(500);
@@ -13,8 +13,9 @@ cartRouter.get('/', (req, res, next) => {
         return res.send(carts)
     })
 })
-cartRouter.post('/', (req, res, next) => {
+cartRouter.post("/", (req, res, next) => {
     const cart = new Cart(req.body);
+    cart.user = req.user._id;
     cart.save(function (err, newCart) {
         if (err) {
             res.status(500);
@@ -38,7 +39,7 @@ cartRouter.get('/:cartId', (req, res, next) => {
 
 cartRouter.put('/:cartId', (req, res, next) => {
     Cart.findOneAndUpdate(
-        { _id: req.params.cardId, user: req.user._id },
+        { _id: req.params.cartId, user: req.user._id },
         req.body, 
         { new: true },
         (err, cart) => {
@@ -52,8 +53,8 @@ cartRouter.put('/:cartId', (req, res, next) => {
     )
 })
 
-cartRouter.delete('/:todoId', (req, res, next) => {
-    Cart.findOneAndRemove({ _id: req.params.todoId, user: req.user._id }, (err, cart) => {
+cartRouter.delete('/:cartId', (req, res, next) => {
+    Cart.findOneAndRemove({ _id: req.params.cartId, user: req.user._id }, (err, cart) => {
         if (err) {
             res.status(500);
             return next(err);
