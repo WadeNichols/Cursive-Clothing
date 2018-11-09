@@ -20,7 +20,7 @@ export class AppContextProvider extends Component {
     
     }
     componentDidMount() {
-        this.getCart();
+        this.getCarts();
     }
     signup = (userInfo) => {
         return axios.post("/auth/signup",userInfo).then(response => {
@@ -60,7 +60,7 @@ export class AppContextProvider extends Component {
         })
     }
 
-    getCart = () => {
+    getCarts = () => {
         return cartAxios.get("/api/cart").then(response => {
         this.setState({ carts: response.data })
             return response;
@@ -105,18 +105,20 @@ export class AppContextProvider extends Component {
         return (
             <AppContext.Provider
                 value={{
-                    signup: this.signup,
-                    login: this.login,
-                    logout: this.logout,
-                    getCart: this.getCart,
+                    getCarts: this.getCarts,
                     addCart: this.addCart,
                     editCart: this.editCart,
                     deleteCart: this.deleteCart,
+                    signup: this.signup,
+                    login: this.login,
+                    logout: this.logout,
                     ...this.state
-                }}
+                    }}
                 >
+                    {this.props.children}
+
             </AppContext.Provider>
-        );
+        )
     }
 }
 
@@ -125,7 +127,12 @@ export const withContext = Component => {
         return (
             <AppContext.Consumer>
                 {globalState => {
-                    return <Component {...globalState} {...props}/>
+                    return (
+                        <Component
+                            {...globalState}
+                            {...props}
+                        />
+                    )
                 }}
             </AppContext.Consumer>
         )
