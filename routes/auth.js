@@ -38,16 +38,19 @@ authRouter.post("/login", (req, res, next) => {
 
 // Routes to update profile
 
-// authRouter.post("/profile", (req, res, next) => {
-//     User.findOneAndUpdate({ username: req.body.username}, (err, userProfile) => {
-//         if (err) {
-//             res.status(500);
-//             return next(err);
-//         } else if (userProfile === null) {
-//             res.status(404);
-//             return next(?)
-//         }
-//     })
-// })
+authRouter.post("/profile", (req, res, next) => {
+    User.findOneAndUpdate({ 
+        name: req.body.name,
+        
+    }, (err, userProfile) => {
+        if (err) {
+            res.status(500);
+            return next(err);
+        } else if (userProfile === null) {
+            res.status(404);
+            return next(new Error("oops something broke"))
+        }
+    })
+})
 
 module.exports = authRouter;

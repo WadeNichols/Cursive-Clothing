@@ -25,6 +25,9 @@ const userSchema = new Schema({
         city: String,
         state: String,
         zipCode: Number
+    },
+    email:{
+        type: String
     }
 });
 

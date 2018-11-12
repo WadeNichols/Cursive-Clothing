@@ -50,6 +50,11 @@ export class AppContextProvider extends Component {
             return response;
         })
     }
+    addUserProfile = credentials => {
+        return axios.post("/profile", credentials).then(response => {
+            console.log(response);
+        })
+    }
 
     logout = () => {
         localStorage.removeItem("user");
