@@ -15,7 +15,6 @@ export default function App() {
       <Route path ="/" component={Login} />
       <ProtectedRoute path ="/carts" component={Cart} />
     </Switch>
-      
     </div>
   )
 }

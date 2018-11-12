@@ -57,41 +57,44 @@ class Login extends Component {
   render() {
     return (
       <div>
-            <Dialog
-              
-              open={this.state.open}
-              onClose={this.handleClose}
-              aria-labelledby="form-dialog-title"
-            >
-              <DialogTitle id="form-dialog-title">Welcome to C.C.C</DialogTitle>
-              <DialogContent>
-                <DialogContentText>Please login or signup</DialogContentText>
-                <TextField
-                  autoFocus
-                  margin="dense"
-                  id="username"
-                  label="username"
-                  type="username"
-                  fullWidth
-                />
-                <TextField
-                  autoFocus
-                  margin="dense"
-                  id="password"
-                  label="password"
-                  type="password"
-                  fullWidth
-                />
-              </DialogContent>
-              <DialogActions>
-                <Button onClick={this.handleClose} color="primary">
-                  Sing-Up
-                </Button>
-                <Button onClick={this.handleSubmit} color="primary">
-                  Login
-                </Button>
-              </DialogActions>
-            </Dialog>
+        <Dialog
+          open={this.state.open}
+          onClose={this.handleClose}
+          aria-labelledby="form-dialog-title"
+        >
+          <DialogTitle id="form-dialog-title">Welcome to C.C.C</DialogTitle>
+          <DialogContent>
+            <DialogContentText>Please login or signup</DialogContentText>
+            <TextField
+              autoFocus
+              margin="dense"
+              id="username"
+              label="username"
+              type="username"
+              fullWidth
+            />
+            <TextField
+              autoFocus
+              margin="dense"
+              id="password"
+              label="password"
+              type="password"
+              fullWidth
+            />
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={this.handleClose} color="primary">
+              Sing-Up
+            </Button>
+            <Button onClick={this.handleSubmit} color="primary">
+              Login
+            </Button>
+          </DialogActions>
+        </Dialog>
+        {
+          this.state.errorMessage &&
+          <p style={{color: "red"}}>{this.state.errorMessage}</p>
+        }
       </div>
     );
   }
