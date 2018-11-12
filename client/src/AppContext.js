@@ -15,7 +15,7 @@ export class AppContextProvider extends Component {
         this.state = {
             carts: [],
             user: JSON.parse(localStorage.getItem("user")) || {},
-            token: localStorage.getItem("token") || ""
+            token: localStorage.getItem("token") || "" 
         };
     
     }
@@ -24,6 +24,7 @@ export class AppContextProvider extends Component {
     }
     signup = (userInfo) => {
         return axios.post("/auth/signup",userInfo).then(response => {
+            console.log(response);
             const {user, token} = response.data;
             localStorage.setItem("token", token);
             localStorage.setItem("user", JSON.stringify(user));
