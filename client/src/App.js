@@ -6,16 +6,17 @@ import { Switch, Route } from "react-router-dom";
 import Login from './components/Auth/Login';
 import ProtectedRoute from "./components/Auth/ProtectedRoute";
 import Cart from "./components/Cart/Cart"
+import Navbar from './Navbar'
 
 
 
 export default function App() {
   return (
     <div>
-      {/* <Navbar /> */}
+      <Navbar />
     <Switch> 
       <Route path ="/" component={Login} />
-      <ProtectedRoute path ="/home" component={Cart} />
+      <ProtectedRoute path ="/carts" component={Cart} />
     </Switch>
     </div>
   )

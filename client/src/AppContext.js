@@ -21,9 +21,11 @@ export class AppContextProvider extends Component {
         };
     
     }
+    
     componentDidMount() {
         this.getCarts();
     }
+
     signup = (userInfo) => {
         return axios.post("/auth/signup",userInfo).then(response => {
             console.log(response);
@@ -38,6 +40,7 @@ export class AppContextProvider extends Component {
             return response
         });
     };
+
     login = credentials => {
         return axios.post("/auth/login", credentials).then(response => {
             console.log(response);

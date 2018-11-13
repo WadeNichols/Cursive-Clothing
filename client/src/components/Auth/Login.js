@@ -61,7 +61,7 @@ class Login extends Component {
     this.props.signup(this.state)
       .then(() => this.clearInputs())
       .then(() => this.handleCloseLogin())
-      .then (() => this.props.history.push('/carts'))
+      .then (() => this.props.history.push('/home'))
       .catch(err => {
         this.setState({ errorMessage: err.response.data.message })
       })
