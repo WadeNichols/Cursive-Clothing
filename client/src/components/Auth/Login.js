@@ -21,32 +21,35 @@ class Login extends Component {
       errMessage: ""
     };
   }
+
+
+  handleCloseLogin = () => {
+    this.setState({open: false})
+  }
+
+
   handleChange = e => {
     const target = e.target;
     const value = target.type === "username" ? target.username : target.value;
     const name = target.name
     this.setState({
       [name]: value
-    });
-  };
-  // handleClickLogin = () => {
-  //   this.state.errMessage !== "" ? runError and keep the login open show the error to user : this.handleCloseLogin|| () => {save to localStorage the state of username password and logged in})
-  // };
+    })
+  }
 
-  handleCloseLogin = () => {
-    this.setState({open: false});
-  };
   clearInputs = () => {
     this.setState({
       username: "",
       password: "",
       errorMessage: ""
-    });
-  };
+    })
+  }
+
 
   handleLogin = e => {
     e.preventDefault();
     this.props.login(this.state)
+
       .then(() => this.props.history.push("/carts"))
       .then(() => this.clearInputs())
       .then(() => this.handleCloseLogin())
@@ -63,9 +66,8 @@ class Login extends Component {
       .then(() => this.handleCloseLogin())
       .catch(err => {
         this.setState({ errorMessage: err.response.data.message });
-      });
-  };
-
+      })
+  }
 
   render() {
     return (

@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import axios from "axios";
 const cartAxios = axios.create();
+
+
 cartAxios.interceptors.request.use(config => {
   const token = localStorage.getItem("token");
   config.headers.Authorization = `Bearer ${token}`;
   return config;
 });
+
 const AppContext = React.createContext();
 
 export class AppContextProvider extends Component {
