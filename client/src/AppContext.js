@@ -20,9 +20,11 @@ export class AppContextProvider extends Component {
       token: localStorage.getItem("token") || ""
     };
   }
+
   componentDidMount() {
     this.getCarts();
   }
+
   getCarts = () => {
     return cartAxios.get("/api/cart").then(response => {
       this.setState({ carts: response.data });
@@ -62,6 +64,7 @@ export class AppContextProvider extends Component {
       return response;
     });
   };
+
   signup = userInfo => {
     return cartAxios.post("/auth/signup", userInfo).then(response => {
       console.log(response);
@@ -76,6 +79,7 @@ export class AppContextProvider extends Component {
       return response;
     });
   };
+
   login = credentials => {
     return cartAxios.post("/auth/login", credentials).then(response => {
       console.log(response);
@@ -90,6 +94,7 @@ export class AppContextProvider extends Component {
       return response;
     });
   };
+  
   addUserProfile = credentials => {
     return cartAxios.post("/profile", credentials).then(response => {
       console.log(response);

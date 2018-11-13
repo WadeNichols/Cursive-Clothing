@@ -51,7 +51,7 @@ userSchema.methods.checkPassword = function(passwordAttempt, callback) {
 }
 
 userSchema.methods.withoutPassword = function () {
-    const user = this.withoutPassword();
+    const user = this.toObject();
     delete user.password;
     return user;
 }

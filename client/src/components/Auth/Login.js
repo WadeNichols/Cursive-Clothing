@@ -50,7 +50,7 @@ class Login extends Component {
     e.preventDefault();
     this.props.login(this.state)
 
-      .then(() => this.props.history.push("/carts"))
+      .then(() => this.props.history.push("/Navbar"))
       .then(() => this.clearInputs())
       .then(() => this.handleCloseLogin())
       .catch(err => {

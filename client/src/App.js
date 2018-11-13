@@ -7,7 +7,7 @@ import Login from './components/Auth/Login';
 import ProtectedRoute from "./components/Auth/ProtectedRoute";
 
 import CartList from "./components/Cart/CartList"
-// import Navbar from './components/Navbar/Navbar';
+import Navbar from './Navbar';
 
 
 
@@ -15,13 +15,12 @@ import CartList from "./components/Cart/CartList"
 export default function App() {
   return (
     <div>
-    <Switch> 
-      <Route path ="/login" component={Login} />
-      <ProtectedRoute path ="/carts" component={CartList}/>
-      {/* <ProtectedRoute path ="/updateProfile" component={UserDetail}/>
-      <ProtectedRoute path ="/carts" component={Items}/> */}
-      <Route exact path ="/" render={() => <Redirect to="/carts" />} />
-    </Switch>
+      <Navbar />
+      <Switch> 
+        <Route path ="/login" component={Login} />
+        <ProtectedRoute path ="/carts" component={CartList}/>
+        <Route exact path ="/" render={() => <Redirect to="/carts" />} />
+      </Switch>
     </div>
   )
 }
