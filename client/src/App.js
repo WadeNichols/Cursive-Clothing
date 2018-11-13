@@ -15,11 +15,12 @@ import Navbar from './Navbar';
 export default function App() {
   return (
     <div>
-    <Switch> 
-      <Route path ="/login" component={Login} />
-      <ProtectedRoute path ="/carts" component={CartList}/>
-      <Route exact path ="/" render={() => <Redirect to="/carts" />} />
-    </Switch>
+      <Navbar />
+      <Switch> 
+        <Route path ="/login" component={Login} />
+        <ProtectedRoute path ="/carts" component={CartList}/>
+        <Route exact path ="/" render={() => <Redirect to="/carts" />} />
+      </Switch>
     </div>
   )
 }
