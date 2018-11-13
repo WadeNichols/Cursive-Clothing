@@ -7,7 +7,7 @@ import Login from './components/Auth/Login';
 import ProtectedRoute from "./components/Auth/ProtectedRoute";
 
 import CartList from "./components/Cart/CartList"
-import Navbar from './components/Navbar/Navbar';
+import Navbar from './Navbar';
 
 
 
