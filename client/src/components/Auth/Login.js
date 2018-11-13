@@ -47,15 +47,18 @@ class Login extends Component {
   handleLogin = e => {
     e.preventDefault();
     this.props.login(this.state)
+      .then(() => this.props.history.push("/carts"))
       .then(() => this.clearInputs())
       .then(() => this.handleCloseLogin())
       .catch(err => {
         this.setState({ errorMessage: err.response.data.message });
       });
   };
+
   handleSignup = e => {
     e.preventDefault();
     this.props.signup(this.state)
+      .then(() => this.props.history.push("/carts"))
       .then(() => this.clearInputs())
       .then(() => this.handleCloseLogin())
       .catch(err => {

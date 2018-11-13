@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { Component } from 'react'
+
 //material ui components
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
@@ -7,6 +8,8 @@ import Divider from "@material-ui/core/Divider";
 import MenuIcon from "@material-ui/icons/Menu";
 import HomeIcon from "@material-ui/icons/Home";
 import { IconButton, Typography } from "@material-ui/core";
+import {withContext} from "../../AppContext"
+
 
 const styles = {
   list: {
@@ -27,83 +30,21 @@ const styles = {
   }
 };
 
-import {withContext} from "../../AppContext"
 
-
-class Navbar(props) extends react.Component {
-    state = {
-        top: true
-    }
-    toggleDrawer = (side, open) => () => {
-        this.setState({
-          [side]: open
-        });
-      };
-      render() {
-        const { classes } = this.props;
-        const fullList = (
-            <div className={classes.fullList}>
-              <Typography variant="display2" color="inherit" className={classes.grow}>
-                Welcome to CCC
-              </Typography>
-              <Divider />
-              <IconButton component={Link} to="/characters" color="secondary">
-                <HomeIcon />
-              </IconButton>
-              <IconButton
-                className={classes.menuButton}
-                color="secondary"
-                component={Link}
-                to="/"
-              >
-                <MenuIcon />
-              </IconButton>
-              <Divider />
-            </div>
-          );
-
-          return (
-            <div>
-              <IconButton
-                className={classes.menuButton}
-                color="primary"
-                onClick={this.toggleDrawer("top", true)}
-              >
-                <MenuIcon />
-                Navigation
-              </IconButton>
-              <Drawer
-                open={this.state.left}
-                onClose={this.toggleDrawer("left", false)}
-              >
-                <div
-                  tabIndex={0}
-                  role="button"
-                  onClick={this.toggleDrawer("left", false)}
-                  onKeyDown={this.toggleDrawer("left", false)}
-                />
-              </Drawer>
-              <Drawer
-                anchor="top"
-                open={this.state.top}
-                onClose={this.toggleDrawer("top", false)}
-              >
-                <div
-                  tabIndex={0}
-                  role="button"
-                  onClick={this.toggleDrawer("top", false)}
-                  onKeyDown={this.toggleDrawer("top", false)}
-                >
-                  {fullList}
-                </div>
-              </Drawer>
-            </div>
-          );
+class Navbar extends Component (props) {
+    constructor(){
+        super();
+        state = {
+            top: true
         }
-      }
-    
+    }
+    render(){
+        return(
+            <div>
+                <button />
+            </div>
+        )
+    }
+}
 
-Navbar.propTypes = {
-    classes: PropTypes.object.isRequired
-  };
 export default withContext(Navbar)
