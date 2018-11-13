@@ -11,7 +11,7 @@ function Navbar(props) {
                         <Link to='/signup'>Sign Up</Link>
                     </div>
                     <div>
-                        <Link to='/login'>Log In</Link>
+                        <Link to='/'>Log In</Link>
                     </div>
                 </React.Fragment>
                 )  :  (
