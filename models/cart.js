@@ -15,9 +15,11 @@ const cartSchema = new Schema({
         ref: "User",
         required: true
     },
-    description: String,
-    quantity: Number,
-    link: String
+    items: {
+        type: Schema.Types.ObjectId,
+        
+    }
 });
+
 
 module.exports = mongoose.model("Cart", cartSchema)

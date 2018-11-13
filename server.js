@@ -24,6 +24,7 @@ mongoose.connect(
 app.use("/auth", require("./routes/auth"));
 app.use("/api/cart", require("./routes/cart"));
 
+
 app.use((err, req, res, next) => {
   console.log(err);
   if (err.name === "UnauthorizedError") {
