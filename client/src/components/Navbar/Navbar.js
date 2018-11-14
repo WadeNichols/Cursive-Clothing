@@ -4,38 +4,38 @@ import { withContext } from "../../AppContext";
 import { AppBar, Toolbar, Typography, IconButton } from "@material-ui/core";
 import { Button } from "@material-ui/core";
 import Login from "../Auth/Login";
-import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
+import ExitIcon from "@material-ui/icons/ExitToAppTwoTone";
 
 function Navbar(props) {
   return (
-    
-      <div>{!props.token ? (
+    <div>
+      {!props.token ? (
         <React.Fragment>
           <Route render={Login} />
         </React.Fragment>
       ) : (
         <React.Fragment>
-        <AppBar>
-        <Toolbar>
-              <Button componet={Link} to="/home">
+          <AppBar>
+            <Toolbar>
+              <Button component={Link} to="/home">
                 Home
               </Button>
-              <Button componet={Link} to="/men">
-                Men
+              <Button component={Link} to="/men">
+                Men's
               </Button>
-              <Button componet={Link} to="/woman">
-                Women
+              <Button component={Link} to="/woman">
+                Women's
               </Button>
-              <IconButton componet={Link} to="/cart">
-                  <AddShoppingCartIcon/>
+              <IconButton component={Link} to="/carts">
+                <AddShoppingCartIcon />
               </IconButton>
-              <Button onClick={() => props.logout()}>Logout</Button>
-              </Toolbar>
+              <ExitIcon onClick={() => props.logout()} aria-label="logout" />
+            </Toolbar>
           </AppBar>
         </React.Fragment>
       )}
-      </div>
-     
+    </div>
   );
 }
 
