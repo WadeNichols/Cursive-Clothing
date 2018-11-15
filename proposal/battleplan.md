@@ -10,14 +10,29 @@
     - [x] delete cart
 ase
 - [x] build a login page
-- [ ] build a home page that is rendered when after you login
+- [x] build a home page that is rendered when after you login
 - [ ] time to reformulate the plan 
 
 
 mikes additions to the codebase
 - [x] build login page
     - [x] have the page keep state for the input fields 
-- [ ] look up how to properly construct a flow chart for           application process 
-    - [ ] build a flow chart for whatever process you are          working on.
-    - [ ] look for a free pdf copy of web coding for dummies        they have a chapter on proper site planning. 
+- [ ] look up how to properly construct a flow chart for
+      application process 
+    - [ ] build a flow chart for whatever process you are          
+          working on.
+    - [ ] look for a free pdf copy of web coding for dummies        
+          they have a chapter on proper site planning. 
 
+mikes new problems to fix
+- [ ]  post images and items 
+    - [ ] build proper routes
+    - [ ] build proper models
+    - [ ] perform crud functions
+        - [ ] create
+        - [ ] read
+        - [ ] update
+        - [ ] delete
+    - [ ] build a superuser to post the items
+        - [ ] post the items 
+        - [ ] 

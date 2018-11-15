@@ -1,9 +1,9 @@
 Project Requirements
 
-- [ ] A passed off proposal Explaining your app
-- [ ] Use JWTs to create a token-based authentication system to authenticate users
-- [ ] Include password hashing, so no un-encoded password strings are saved in the database
-- [ ] Save the JWT in web storage and set it up to send automatically with every request.
+- [x] A passed off proposal Explaining your app
+- [x] Use JWTs to create a token-based authentication system to authenticate users
+- [x] Include password hashing, so no un-encoded password strings are saved in the database
+- [x] Save the JWT in web storage and set it up to send automatically with every request.
 - [ ] Include the ability for users to have differing levels of permissions (optional)
 
 

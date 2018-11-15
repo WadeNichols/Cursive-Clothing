@@ -39,11 +39,23 @@ authRouter.post("/login", (req, res) => {
 
 // Routes to update profile
 
+
 authRouter.put("/profile", (req, res, next) => {
-  User.findByIdAndUpdate({ username: req.body.username.toLowerCase() }, (err,user) => {
-    if (err) return res.status(500).send(err);
-    
-  })
+  User.findOneAndUpdate({ username: req.body.username }, (err, existingUser) => {
+    if (err) {
+      res.status(500);
+      return next(err);
+    } else if (existingUser !== null) {
+      res.status(400);
+      return next(new Error("That username already exists!"));
+    }
+    const newUser = new User(req.body);
+    newUser.save((err, user) => {
+      if (err) return res.status(500).send({ success: false, err });
+      const token = jwt.sign(user.toObject(), process.env.SECRET);
+      return res.status(201).send({ user: user.toObject(), token });
+    });
+  });
 });
 
 module.exports = authRouter;
