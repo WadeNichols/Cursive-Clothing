@@ -8,6 +8,9 @@ const AdminList = props => {
             <AdminForm
                 key={key._id}
                 getitem={getItem}
+                postItem={postItem}
+                deleteItem={deleteItem}
+                editItem={editItem}
             />
         )
     })
