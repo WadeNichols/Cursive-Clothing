@@ -103,7 +103,7 @@ class Login extends Component {
           </DialogContent>
           <DialogActions>
             <Button onClick={this.handleSignup} color="primary">
-              Sing-Up
+              Sign-Up
             </Button>
             <Button onClick={this.handleLogin} color="primary">
               Login

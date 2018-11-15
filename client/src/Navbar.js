@@ -4,7 +4,7 @@ import { withContext } from './AppContext'
 
 function Navbar(props) {
     return (
-        <nav>
+        <span className="navbar">
             {!props.token ? (
                 <React.Fragment>
                     <div>
@@ -27,7 +27,7 @@ function Navbar(props) {
                     </div>
                 </React.Fragment>
             )}
-        </nav>
+        </span>
     )
 }
 
