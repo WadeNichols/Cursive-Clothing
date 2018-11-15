@@ -3,11 +3,14 @@ import withContext from '../../AppContext';
 import AdminForm from './AdminForm';
 
 const AdminList = props => {
-    return (
-        <AdminForm
-            
-        />
-    )
+    const admin = props.admin.map(admin =>{
+        return (
+            <AdminForm
+                key={key._id}
+                getitem={getItem}
+            />
+        )
+    })
 }
 
 

@@ -128,6 +128,7 @@ export class AppContextProvider extends Component {
           signup: this.signup,
           login: this.login,
           logout: this.logout,
+          getItem: this.getItem,
           ...this.state
         }}
       >
