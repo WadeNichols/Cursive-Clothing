@@ -1,19 +1,18 @@
-import React from 'react'
-import withContext from '../../AppContext';
-import AdminForm from './AdminForm';
+import React from "react";
+import { withContext } from "../../AppContext";
+import AdminForm from "./AdminForm";
+import Items from "./Items";
 
 const AdminList = props => {
-    const admin = props.admin.map(admin =>{
-        return (
-            <AdminForm
-                key={key._id}
-                getitem={getItem}
-                postItem={postItem}
-                deleteItem={deleteItem}
-                editItem={editItem}
-            />
-        )
-    })
-}
-
-
+  return (
+    
+      <AdminForm
+        getItem={props.getItem}
+        postItem={props.postItem}
+        deleteItem={props.deleteItem}
+        editItem={props.editItem}
+      />
+    
+  );
+};
+export default withContext(AdminList);

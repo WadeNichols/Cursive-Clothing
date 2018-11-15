@@ -9,7 +9,7 @@ import ExitIcon from "@material-ui/icons/ExitToAppTwoTone";
 
 function Navbar(props) {
   return (
-    <div>
+    <header>
       {!props.token ? (
         <React.Fragment>
           <Route render={Login} />
@@ -35,7 +35,7 @@ function Navbar(props) {
           </AppBar>
         </React.Fragment>
       )}
-    </div>
+    </header>
   );
 }
 
