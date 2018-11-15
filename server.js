@@ -5,7 +5,9 @@ const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const expressJwt = require("express-jwt");
 const PORT = process.env.PORT || 9090;
-const app = express()
+const app = express();
+
+
 
 app.use(morgan("dev"));
 app.use(bodyParser.json());
@@ -21,8 +23,11 @@ mongoose.connect(
   }
 );
 
+
 app.use("/auth", require("./routes/auth"));
 app.use("/api/cart", require("./routes/cart"));
+app.use("/api/item", require("./routes/item"));
+
 
 
 app.use((err, req, res, next) => {
