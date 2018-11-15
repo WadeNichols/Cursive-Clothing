@@ -22,33 +22,31 @@ class Login extends Component {
     };
   }
 
-
   handleCloseLogin = () => {
-    this.setState({open: false})
-  }
-
+    this.setState({ open: false });
+  };
 
   handleChange = e => {
     const target = e.target;
     const value = target.type === "username" ? target.username : target.value;
-    const name = target.name
+    const name = target.name;
     this.setState({
       [name]: value
-    })
-  }
+    });
+  };
 
   clearInputs = () => {
     this.setState({
       username: "",
       password: "",
       errorMessage: ""
-    })
-  }
-
+    });
+  };
 
   handleLogin = e => {
     e.preventDefault();
-    this.props.login(this.state)
+    this.props
+      .login(this.state)
 
       .then(() => this.props.history.push("/Navbar"))
       .then(() => this.clearInputs())
@@ -60,14 +58,15 @@ class Login extends Component {
 
   handleSignup = e => {
     e.preventDefault();
-    this.props.signup(this.state)
+    this.props
+      .signup(this.state)
       .then(() => this.props.history.push("/carts"))
       .then(() => this.clearInputs())
       .then(() => this.handleCloseLogin())
       .catch(err => {
         this.setState({ errorMessage: err.response.data.message });
-      })
-  }
+      });
+  };
 
   render() {
     return (

@@ -4,6 +4,7 @@ function Cart(props) {
     return (
         <div>
             <h3>{props.cart.name}</h3>
+            <h3>${props.cart.price}</h3>
             <label>Completed:</label>
             <input
                 onChange={() => props.editCart(props.cart._id, { completed: !props.cart.completed })}

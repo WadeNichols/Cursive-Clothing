@@ -39,18 +39,23 @@ authRouter.post("/login", (req, res) => {
 
 // Routes to update profile
 
-authRouter.post("/profile", (req, res, next) => {
-  User.findOneAndUpdate({name: req.body.name.toLowerCase() },
-    (err, userProfile) => {
-      if (err) {
-        res.status(500);
-        return next(err);
-      } else if (userProfile === null) {
-        res.status(404);
-        return next(new Error("oops something broke"));
-      }
+
+authRouter.put("/profile", (req, res, next) => {
+  User.findOneAndUpdate({ username: req.body.username }, (err, existingUser) => {
+    if (err) {
+      res.status(500);
+      return next(err);
+    } else if (existingUser !== null) {
+      res.status(400);
+      return next(new Error("That username already exists!"));
     }
-  );
+    const newUser = new User(req.body);
+    newUser.save((err, user) => {
+      if (err) return res.status(500).send({ success: false, err });
+      const token = jwt.sign(user.toObject(), process.env.SECRET);
+      return res.status(201).send({ user: user.toObject(), token });
+    });
+  });
 });
 
 module.exports = authRouter;
