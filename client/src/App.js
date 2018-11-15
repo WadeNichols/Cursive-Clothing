@@ -6,8 +6,11 @@ import { Switch, Route, Redirect} from "react-router-dom";
 import Login from './components/Auth/Login';
 import ProtectedRoute from "./components/Auth/ProtectedRoute";
 import CartList from "./components/Cart/CartList"
+
 import Navbar from './components/Navbar/Navbar';
 import AdminList from './components/Admin/AdminList'
+import Home from './Home'
+
 
 
 
@@ -21,6 +24,7 @@ export default function App() {
         <Route exact path ="/" render={() => <Redirect to="/carts" />} />
         <Route path ="/admin" component={AdminList}/>
       </Switch>
+      <Home />
     </div>
   )
 }

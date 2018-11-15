@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from "react-router-dom";
 import { AppContextProvider } from "./AppContext";
 import App from "./App";
+import "./assets/styles.css"
 
 ReactDOM.render(
     <AppContextProvider>
         <BrowserRouter>
-            <App/>
+            <App />
         </BrowserRouter>
     </AppContextProvider>,
     document.getElementById("root")
