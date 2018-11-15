@@ -12,16 +12,11 @@ body{
     box-sizing: border-box
 }
 
-.navbar {
-
-
-}
-
 .wrapper {
     background: #B11622;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 100px 400px 400px 100px
+    grid-template-rows: 70vw 45vh 45vh 70vw
 }
 
 .header {
@@ -39,7 +34,7 @@ body{
 
 .man {
     height:100%;
-    width: 85%;
+    width: 95%;
 }
 
 .empty-space1 {
@@ -54,15 +49,15 @@ body{
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    width: 300px;
-    height: 300px;
+    width: 30%;
+    height: 30%;
     border-right: 2px solid white;
 }
 
 .cursive {
     color: white;
     font-family: 'Satisfy', cursive;
-    font-size: 3cm;
+    font-size: 2cm;
     text-shadow:
     -1px -1px 0 #000,  
      1px -1px 0 #000,
@@ -99,14 +94,12 @@ body{
 .cc {
     color: whitesmoke;
     font-family: 'Satisfy', cursive;
-    font-size: 3cm;
+    font-size: 2cm;
     text-shadow:
     -1px -1px 0 #000,  
      1px -1px 0 #000,
      -1px 1px 0 #000,
       1px 1px 0 #000;
-    stroke-width: 2px;
-
 }
 
 .footer {

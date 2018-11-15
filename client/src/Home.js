@@ -6,10 +6,10 @@ export default function Home() {
         <div className="header"></div>
         <div className="img-container1">
             <img className="man" src={require("./assets/manPolo.jpg")}/>
-            <div className="empty-space1">
-                <div className ="penguin"></div>
-                <h1 className="cursive">Cursive</h1>
-            </div>
+        <div className="empty-space1">
+            <div className="penguin"></div>
+            <h1 className="cursive">Cursive</h1>
+        </div>
         </div>
         <div className ="img-container2">
             <div className="girl"></div>
