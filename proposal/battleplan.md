@@ -41,3 +41,4 @@ mikes new problems to fix
     - [ ] build a admin to post the items
         - [ ] post the items 
         - [ ] build a admin view
+        - [ ] admin view only accesable to someone who is logged in
