@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import axios from "axios";
 const cartAxios = axios.create();
 
-
 cartAxios.interceptors.request.use(config => {
   const token = localStorage.getItem("token");
   config.headers.Authorization = `Bearer ${token}`;
@@ -94,7 +93,7 @@ export class AppContextProvider extends Component {
       return response;
     });
   };
-  
+
   addUserProfile = credentials => {
     return cartAxios.post("/profile", credentials).then(response => {
       console.log(response);
@@ -112,8 +111,11 @@ export class AppContextProvider extends Component {
   };
 
   getItem = () => {
-    return 
-  }
+    return cartAxios.get("/api/item").then(response => {
+      this.setState({ item: response.data });
+      return response;
+    });
+  };
 
   render() {
     return (
@@ -126,6 +128,7 @@ export class AppContextProvider extends Component {
           signup: this.signup,
           login: this.login,
           logout: this.logout,
+          getItem: this.getItem,
           ...this.state
         }}
       >
