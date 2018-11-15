@@ -17,7 +17,7 @@ ase
 mikes additions to the codebase
 - [x] build login page
     - [x] have the page keep state for the input fields 
-- [ ] look up how to properly construct a flow chart for
+- [x] look up how to properly construct a flow chart for
       application process 
     - [ ] build a flow chart for whatever process you are          
           working on.
@@ -26,13 +26,18 @@ mikes additions to the codebase
 
 mikes new problems to fix
 - [ ]  post images and items 
-    - [ ] build proper routes
-    - [ ] build proper models
+    - [x] build proper routes
+    - [x] build proper models
     - [ ] perform crud functions
-        - [ ] create
-        - [ ] read
-        - [ ] update
-        - [ ] delete
-    - [ ] build a superuser to post the items
+        - [x] create
+        - [x] read
+        - [x] update
+        - [x] delete
+        - [ ] perform crud functions for images
+            - [ ] create
+            - [ ] read
+            - [ ] update
+            - [ ] delete
+    - [ ] build a admin to post the items
         - [ ] post the items 
-        - [ ] 
+        - [ ] build a admin view
