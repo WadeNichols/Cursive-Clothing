@@ -111,6 +111,10 @@ export class AppContextProvider extends Component {
     });
   };
 
+  getItem = () => {
+    return 
+  }
+
   render() {
     return (
       <AppContext.Provider

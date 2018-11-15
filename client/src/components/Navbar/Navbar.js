@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, Route } from "react-router-dom";
 import { withContext } from "../../AppContext";
-import { AppBar, Toolbar, Typography, IconButton } from "@material-ui/core";
+import { AppBar, Toolbar, IconButton } from "@material-ui/core";
 import { Button } from "@material-ui/core";
 import Login from "../Auth/Login";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
