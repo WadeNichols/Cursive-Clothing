@@ -6,8 +6,8 @@ import { Switch, Route, Redirect} from "react-router-dom";
 import Login from './components/Auth/Login';
 import ProtectedRoute from "./components/Auth/ProtectedRoute";
 import CartList from "./components/Cart/CartList"
-import Navbar from './components/Navbar/Navbar';
-
+import Navbar from './Navbar';
+import Home from './Home'
 
 
 
@@ -20,6 +20,7 @@ export default function App() {
         <ProtectedRoute path ="/carts" component={CartList}/>
         <Route exact path ="/" render={() => <Redirect to="/carts" />} />
       </Switch>
+      <Home />
     </div>
   )
 }
