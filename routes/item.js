@@ -1,6 +1,8 @@
 const express = require("express");
 const itemRouter = express.Router();
 const Item = require("../models/item");
+var multer  = require('multer')
+var upload = multer({ dest: 'uploads/' })
 
 itemRouter.get("/", (req, res, next) => {
   Item.find({}, (err, items) => {
@@ -12,7 +14,7 @@ itemRouter.get("/", (req, res, next) => {
   });
 });
 
-itemRouter.post("/", (req, res, next) => {
+itemRouter.post("/", upload("photos", 8), (req, res, next) => {
   const item = new Item(req.body);
   item.user = req.user._id;
   item.save(function(err, newItem) {
