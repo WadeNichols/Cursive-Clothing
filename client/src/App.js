@@ -7,11 +7,12 @@ import Login from './components/Auth/Login';
 import ProtectedRoute from "./components/Auth/ProtectedRoute";
 import CartList from "./components/Cart/CartList"
 
+//my components 
 import Navbar from './components/Navbar/Navbar';
 import AdminList from './components/Admin/AdminList'
-import Home from './Home'
-
-
+import Home from './Home';
+import MensClothing from './MensClothing';
+import WomensClothing from './WomensClothing';
 
 
 export default function App() {
@@ -25,6 +26,8 @@ export default function App() {
         <Route path ="/admin" component={AdminList}/>
       </Switch>
       <Home />
+      <MensClothing />
+      <WomensClothing />
     </div>
   )
 }
