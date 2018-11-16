@@ -18,7 +18,7 @@ class AdminForm extends Component{
 
     render(){
         return(
-            <form>
+            <form style={{"marginTop":"200px"}}>
                 <TextField
                     id="productName"
                     label="Product Name"
@@ -54,13 +54,14 @@ class AdminForm extends Component{
                     onChange={this.handleChange}
                     type="number"
                 />
-                <TextField
+                <input
                     id="fieldName"
                     label="Image"
                     value={this.state.fieldname}
                     onChange={this.handleChange}
-                    type="number"
+                    type="file"
                 />
+                <button>Submit new</button>
             </form>
         )
     }

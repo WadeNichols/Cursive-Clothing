@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default function Home() {
   return (
-    <Link to={"/men"}>
+    <Link className="home-link" to={"/men"}>
         <div className="wrapper">
             <div className="header"></div>
             <div className="img-container1">
@@ -19,8 +19,7 @@ export default function Home() {
                     <h1 className="cc">Clothing<br/> Company</h1>
                 </div>
             </div>
-            {/* <div className ="footer"></div> */}
-                
+            <div className ="footer"></div>
         </div>
     </Link>
   );

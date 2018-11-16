@@ -6,9 +6,7 @@
 }
 
 .items-container{
-    /* width: 25%;
-    height: 200px; */
-    background:cornflowerblue;
+    margin: 2cm 0;
 }
 
 
@@ -31,4 +29,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+p {
+    height: 25%;
+    width: 80%;
+    align-content: center;
+    transition-duration: 0.4s;
 }

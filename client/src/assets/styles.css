@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Satisfy');
-
+* {
+    text-decoration: none;
+}
 body{
    margin: 0;
+   text-decoration: none;
 }
 
 *,
@@ -11,6 +14,12 @@ body{
     padding: 0;
     box-sizing: border-box
 }
+
+.home-link {
+    text-decoration: none;
+
+}
+
 
 .wrapper {
     background: #B11622;
@@ -47,6 +56,7 @@ body{
 }
 
 .penguin {
+    text-decoration: none;
     background-image: url("penguin-transparent.png");
     background-size: contain;
     background-position: center;
@@ -57,6 +67,7 @@ body{
 }
 
 .cursive {
+    text-decoration: none;
     color: white;
     font-family: 'Satisfy', cursive;
     font-size: 4vw;
@@ -72,6 +83,7 @@ body{
     grid-row: 3;
     display: grid;
     grid-template-columns: 2fr 1fr;
+
 }
 
 
@@ -109,3 +121,4 @@ body{
     grid-row: 4;
     background-color: white;
 }
+
