@@ -9,8 +9,8 @@ const MensList = props => {
       <MensCard
         key={mensItem._Id}
         name={mensItem.name}
-        key={mensItem.otherthing}
-        key={mensItem.otherthing}
+        editItem={mensItem.editItem}
+        deleteItem={mensItem.deleteItem}
       />
     );
   });

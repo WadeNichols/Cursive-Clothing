@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Satisfy');
-
+* {
+    text-decoration: none;
+}
 body{
-   margin: 0 150px;
+   margin: 0;
+   text-decoration: none;
 }
 
 *,
@@ -12,11 +15,19 @@ body{
     box-sizing: border-box
 }
 
+.home-link {
+    text-decoration: none;
+
+}
+
+
 .wrapper {
     background: #B11622;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 70vw 45vh 45vh 70vw
+    grid-template-rows: 80px 400px 400px;
+    position:  sticky;
+    margin: 0 150px; 
 }
 
 .header {
@@ -34,7 +45,7 @@ body{
 
 .man {
     height:100%;
-    width: 95%;
+    max-width: 100%;
 }
 
 .empty-space1 {
@@ -45,19 +56,21 @@ body{
 }
 
 .penguin {
+    text-decoration: none;
     background-image: url("penguin-transparent.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    width: 30%;
-    height: 30%;
+    width: 20vw;
+    height: 35vh;
     border-right: 2px solid white;
 }
 
 .cursive {
+    text-decoration: none;
     color: white;
     font-family: 'Satisfy', cursive;
-    font-size: 2cm;
+    font-size: 4vw;
     text-shadow:
     -1px -1px 0 #000,  
      1px -1px 0 #000,
@@ -70,6 +83,7 @@ body{
     grid-row: 3;
     display: grid;
     grid-template-columns: 2fr 1fr;
+
 }
 
 
@@ -94,7 +108,7 @@ body{
 .cc {
     color: whitesmoke;
     font-family: 'Satisfy', cursive;
-    font-size: 2cm;
+    font-size: 4vw;
     text-shadow:
     -1px -1px 0 #000,  
      1px -1px 0 #000,
@@ -107,3 +121,4 @@ body{
     grid-row: 4;
     background-color: white;
 }
+

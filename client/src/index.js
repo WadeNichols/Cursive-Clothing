@@ -4,6 +4,8 @@ import { BrowserRouter } from "react-router-dom";
 import { AppContextProvider } from "./AppContext";
 import App from "./App";
 import "./assets/styles.css"
+import './assets/product.css'
+
 
 ReactDOM.render(
     <AppContextProvider>
