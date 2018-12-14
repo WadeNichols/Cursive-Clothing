@@ -8,7 +8,7 @@ import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
-
+import Home from "../../Home"
 //other imports
 
 class Login extends Component {
@@ -48,7 +48,7 @@ class Login extends Component {
     this.props
       .login(this.state)
 
-      .then(() => this.props.history.push("/Navbar"))
+      .then(() => this.props.history.push("/home"))
       .then(() => this.clearInputs())
       .then(() => this.handleCloseLogin())
       .catch(err => {
@@ -60,7 +60,7 @@ class Login extends Component {
     e.preventDefault();
     this.props
       .signup(this.state)
-      .then(() => this.props.history.push("/carts"))
+      .then(() => this.props.history.push("/home"))
       .then(() => this.clearInputs())
       .then(() => this.handleCloseLogin())
       .catch(err => {
@@ -71,6 +71,7 @@ class Login extends Component {
   render() {
     return (
       <div>
+        <Home />
         <Dialog
           open={this.state.open}
           onClose={this.handleClose}

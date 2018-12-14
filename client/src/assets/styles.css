@@ -25,9 +25,9 @@ body{
     background: #B11622;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 80px 400px 400px;
+    grid-template-rows: 80px 350px 350px;
     position:  sticky;
-    margin: 0 150px; 
+    margin: 15px 140px 0 140px; 
 }
 
 .header {
