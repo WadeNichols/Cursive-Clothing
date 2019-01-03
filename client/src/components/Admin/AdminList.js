@@ -1,7 +1,6 @@
 import React from "react";
 import { withContext } from "../../AppContext";
 import AdminForm from "./AdminForm";
-import Items from "./Items";
 
 const AdminList = props => {
   return (

@@ -31,9 +31,9 @@ const WomensClothing = () => {
       <div className="coats">
         <a
           href="https://www.nordstromrack.com/shop/product/2648627/french-connection-waist-belt-quilted-faux-fur-hooded-jacket?color=BLACK"
-          target="_blank"
+          target="_blank"  rel="noopener noreferrer"
         >
-          <img src={furHood} />
+          <img src={furHood} alt="" />
           <p>
             Price: $69.97
             <br />
@@ -43,9 +43,9 @@ const WomensClothing = () => {
         </a>
         <a
           href="https://www.nordstromrack.com/shop/product/2480966/guess-hi-lo-quilted-jacket?color=FOREST"
-          target="_blank"
+          target="_blank"  rel="noopener noreferrer"
         >
-          <img src={guessJacket} />
+          <img src={guessJacket} alt="" />
           <p>
             Price: $45 <br />
             GUESS Hi-Lo Quilted Jacket
@@ -53,9 +53,9 @@ const WomensClothing = () => {
         </a>
         <a
           href="https://www.nordstromrack.com/shop/product/2599482/bcb-generation-faux-fur-trim-parka-jacket?color=WHITE"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
         >
-          <img src={generationJacket} />
+          <img src={generationJacket} alt="" />
           <p>
             Price: $99.97
             <br />
@@ -64,9 +64,9 @@ const WomensClothing = () => {
         </a>
         <a
           href="https://www.nordstromrack.com/shop/product/2690595/matty-m-plaid-wrap-coat?color=BERRY"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
         >
-          <img src={plaidCoat} />
+          <img src={plaidCoat} alt="" />
           <p>
             Price: $59.97 <br />
             Matty M Plaid Wrap Coat
@@ -77,9 +77,9 @@ const WomensClothing = () => {
       <div className="coats">
         <a
           href="https://www.nordstromrack.com/shop/product/1894782/lush-side-slit-tank?color=BARBERRY"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
         >
-          <img src={lush} />
+          <img src={lush} alt="" />
           <p>
             Price: $9.97 <br />
             Lush Side Slit Tank
@@ -87,9 +87,9 @@ const WomensClothing = () => {
         </a>
         <a
           href="https://www.nordstromrack.com/shop/product/2591843/vince-camuto-textured-satin-blouse?color=RICH%20BLACK"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
         >
-          <img src={satinBlouse} />
+          <img src={satinBlouse} alt="" />
           <p>
             Price: $14.99 <br />
             Vince Camuto Textured Satin Blouse
@@ -97,9 +97,9 @@ const WomensClothing = () => {
         </a>
         <a
           href="https://www.nordstromrack.com/shop/product/2598801/free-people-we-the-free-by-free-people-saturday-lace-trim-linen-blend-tee?color=IVORY"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
         >
-          <img src={laceTrim} />
+          <img src={laceTrim} alt="" />
           <p>
             Price: $9.99 <br />
             Free People We the Free by Free People Saturday Lace Trim Linen
@@ -108,9 +108,9 @@ const WomensClothing = () => {
         </a>
         <a
           href="https://www.nordstromrack.com/shop/product/2582629/lucky-brand-usa-logo-graphic-tee?color=STEEL%20GREY"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
         >
-          <img src={luckyBrand} />
+          <img src={luckyBrand} alt="" />
           <p>
             Price: 11.98
             <br />
@@ -122,9 +122,9 @@ const WomensClothing = () => {
       <div className="coats">
         <a
           href="https://www.nordstromrack.com/shop/product/2561381/democracy-vintage-wash-cord-jeggings-petite?color=BLACK"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
         >
-          <img src={democracy} />
+          <img src={democracy} alt="" />
           <p>
             Price: $39.97 <br />
             Democracy Vintage Wash Cord Jeggings (Petite)
@@ -132,9 +132,9 @@ const WomensClothing = () => {
         </a>
         <a
           href="https://www.nordstromrack.com/shop/product/1475866/vertigo-seamed-stretch-leggings?color=BURGUNDY"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
         >
-          <img src={vertigo} />
+          <img src={vertigo} alt="" />
           <p>
             Price: 19.78 <br />
             Vertigo Seamed Stretch Leggings
@@ -142,9 +142,9 @@ const WomensClothing = () => {
         </a>
         <a
           href="https://www.nordstromrack.com/shop/product/2656050/halogen-halogen-r-slim-pants-regular-petite?color=BLACK-%20WHITE%20YVETTE%20PLD"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
         >
-          <img src={halogen} />
+          <img src={halogen} alt="" />
           <p>
             Price: $17.49
             <br />
@@ -153,9 +153,9 @@ const WomensClothing = () => {
         </a>
         <a
           href="https://www.nordstromrack.com/shop/product/978407/kut-from-the-kloth-cleaned-up-katy-boyfriend-jeans?color=ANGELAS%20DARK%20STONE"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
         >
-          <img src={kyi} />
+          <img src={kyi} alt="" />
           <p>
             Price: $39.97 <br />
             KUT from the Kloth Cleaned Up Katy Boyfriend Jeans
@@ -166,9 +166,9 @@ const WomensClothing = () => {
       <div className="coats">
         <a
           href="https://www.nordstromrack.com/shop/product/2212163/ugg-ugg-r-australia-bailey-bow-corduroy-boot-women?color=BLK"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
         >
-          <img src={uggs} />
+          <img src={uggs} alt="" />
           <p>
             Price: $139.97 <br />
             UGG UGG(R) Australia 'Bailey Bow Corduroy' Boot (Women)
@@ -176,9 +176,9 @@ const WomensClothing = () => {
         </a>
         <a
           href="https://www.nordstromrack.com/shop/product/2316342/ugg-ugg-r-constantine-boot-women?color=CHRC"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
         >
-          <img src={uggsGrey} />
+          <img src={uggsGrey} alt="" />
           <p>
             Price: $109.97
             <br />
@@ -187,9 +187,9 @@ const WomensClothing = () => {
         </a>
         <a
           href="https://www.nordstromrack.com/shop/product/2297746/toms-speckle-chambray-classics-slip-on-sneaker?color=BLACK"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
         >
-          <img src={toms} />
+          <img src={toms} alt="" />
           <p>
             Price: $39.97 <br />
             TOMS Speckle Chambray Classics Slip-On Sneaker
@@ -197,9 +197,9 @@ const WomensClothing = () => {
         </a>
         <a
           href="https://www.nordstromrack.com/shop/product/2657705/halogen-halogen-r-piper-bootie-women?color=BLACK%20LEATHER%2FROSEGOLD"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
         >
-          <img src={halogen} />
+          <img src={halogen} alt="" />
           <p>
             Price: $79.97 <br />
             Halogen Halogen(R) Piper Bootie (Women)
@@ -210,9 +210,9 @@ const WomensClothing = () => {
       <div className="coats">
         <a
           href="https://www.nordstromrack.com/shop/product/2383929/ray-ban-52-mm-wayfarer-sunglasses?color=BLACK"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
         >
-          <img src={rayban} />
+          <img src={rayban} alt="" />
           <p>
             Price: $59.97 <br />
             Ray-Ban 52mm Wayfarer Sunglasses
@@ -220,9 +220,9 @@ const WomensClothing = () => {
         </a>
         <a
           href="https://www.nordstromrack.com/shop/product/2622998/ray-ban-160-mm-shield-sunglasses?color=GOLD%20BROWN"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
         >
-          <img src={raybanShield} />
+          <img src={raybanShield} alt="" />
           <p>
             Price: $79.97 <br />
             Ray-Ban 160mm Shield Sunglasses
@@ -230,9 +230,9 @@ const WomensClothing = () => {
         </a>
         <a
           href="https://www.nordstromrack.com/shop/product/2642164/cejon-faux-fur-collar-waffle-knit-shawl?color=GREY"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
         >
-          <img src={cejon} />
+          <img src={cejon} alt="" />
           <p>
             Price: $32.97 <br />
             Cejon Faux Fur Collar Waffle Knit Shawl
@@ -240,9 +240,9 @@ const WomensClothing = () => {
         </a>
         <a
           href="https://www.nordstromrack.com/shop/product/2620527/14th-union-striped-fringe-trim-infinity-scarf?color=GREY%20COMBO"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
         >
-          <img src={unionScarf} />
+          <img src={unionScarf} alt="" />
           <p>
             Price: $14.97 <br />
             14th & Union Striped Fringe Trim Infinity Scarf
@@ -253,9 +253,9 @@ const WomensClothing = () => {
       <div className="coats">
         <a
           href="https://www.nordstromrack.com/shop/product/2607108/gucci-womens-guccissima-bangle-watch-27-mm?color=NO%20COLOR"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
         >
-          <img src={gucci} />
+          <img src={gucci} alt="" />
           <p>Price: $79.97 </p>
           <p>
             Sofia Cashmere Jersey Cashmere Gloves with
@@ -264,9 +264,9 @@ const WomensClothing = () => {
         </a>
         <a
           href="https://www.nordstromrack.com/shop/product/2181014/kyi-kyi-faux-fur-pompom-wool-blend-classic-beanie?color=CREAM"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
         >
-          <img src={kyi} />
+          <img src={kyi} alt="" />
           <p>
             Price: $24.97 <br />
             Kyi Kyi Faux Fur Pompom Wool Blend Classic Beaniekyi
@@ -275,9 +275,9 @@ const WomensClothing = () => {
 
         <a
           href="https://www.nordstromrack.com/shop/product/2641894/michael-kors-pull-chain-belt-bag?color=BLACK"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
         >
-          <img src={korsPurse} />
+          <img src={korsPurse} alt="" />
           <p>
             Price: $29.97 <br />
             Michael Kkorors Pull Chain Belt Bag
@@ -285,9 +285,9 @@ const WomensClothing = () => {
         </a>
         <a
           href="https://www.nordstromrack.com/shop/product/2498936/rebecca-minkoff-mini-5-zip-leather-crossbody-bag?color=PUTTY"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
         >
-          <img src={rebeccaPurse} />
+          <img src={rebeccaPurse} alt="" />
           <p>
             Price: $67.48 <br />
             >Rebecca Minkoff Mini 5 Zip Leather Crossbody Bag

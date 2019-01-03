@@ -7,7 +7,7 @@ export default function Home() {
         <div className="wrapper">
             <div className="header"></div>
             <div className="img-container1">
-                <img className="man" src={require("./assets/manPolo.jpg")}/>
+                <img className="man" src={require("./assets/manPolo.jpg")} alt="" />
             <div className="empty-space1">
                 <div className="penguin"></div>
                 <h1 className="cursive">Cursive</h1>

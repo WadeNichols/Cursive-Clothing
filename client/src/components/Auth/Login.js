@@ -47,7 +47,6 @@ class Login extends Component {
     e.preventDefault();
     this.props
       .login(this.state)
-
       .then(() => this.props.history.push("/home"))
       .then(() => this.clearInputs())
       .then(() => this.handleCloseLogin())
