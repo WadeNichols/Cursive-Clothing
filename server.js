@@ -4,14 +4,16 @@ require("dotenv").config();
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const expressJwt = require("express-jwt");
-const PORT = process.env.PORT || 9090;
+const PORT = process.env.PORT || 8000;
 const app = express();
+const path = require("path")
 
-
+const secret = process.env.SECRET || "Monkey Pen Friends Vape Doughboy Scotch"
 
 app.use(morgan("dev"));
 app.use(bodyParser.json());
 app.use("/api", expressJwt({ secret: process.env.SECRET }));
+app.use(express.static(path.join(__dirname, "client", "build")))
 
 mongoose.set("useCreateIndex", true);
 mongoose.connect(
@@ -36,6 +38,10 @@ app.use((err, req, res, next) => {
     res.status(err.status);
   }
   return res.send({ message: err.message });
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
 app.listen(PORT, () => {
