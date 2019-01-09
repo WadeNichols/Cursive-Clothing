@@ -16,14 +16,13 @@ app.use("/api", expressJwt({ secret: process.env.SECRET }));
 app.use(express.static(path.join(__dirname, "client", "build")))
 
 mongoose.set("useCreateIndex", true);
-mongoose.connect(
-  "mongodb://localhost:27017/ccc-site",
+mongoose.connect
+(process.env.MONGODB_URI || "mongodb://localhost:27017/ccc-site"),
   { useNewUrlParser: true },
   (err) => {
     if (err) throw err;
     console.log("connected to the database");
   }
-);
 
 
 app.use("/auth", require("./routes/auth"));
