@@ -15,7 +15,6 @@ app.use(bodyParser.json());
 app.use("/api", expressJwt({ secret: process.env.SECRET }));
 app.use(express.static(path.join(__dirname, "client", "build")))
 
-mongoose.set("useCreateIndex", true);
 mongoose.connect
 (process.env.MONGODB_URI || "mongodb://localhost:27017/ccc-site"),
   { useNewUrlParser: true },
@@ -30,6 +29,9 @@ app.use("/api/cart", require("./routes/cart"));
 app.use("/api/item", require("./routes/item"));
 
 
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
 
 app.use((err, req, res, next) => {
   console.log(err);
@@ -39,9 +41,6 @@ app.use((err, req, res, next) => {
   return res.send({ message: err.message });
 });
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
-});
 
 app.listen(PORT, () => {
   console.log(`[+] Starting server on port ${PORT}`)
